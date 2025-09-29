@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Seconds-Style Interval Timer Design System
+High-contrast, color-coded fitness timer with full-screen visibility
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base theme colors - Light theme for better readability */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    /* Workout Block Colors - High contrast, light backgrounds */
+    --warmup: 45 100% 95%;        /* Light Yellow */
+    --warmup-foreground: 45 93% 15%;
+    
+    --combo: 217 100% 95%;        /* Light Blue */
+    --combo-foreground: 217 91% 25%;
+    
+    --pyramid: 263 90% 95%;      /* Light Indigo */
+    --pyramid-foreground: 263 70% 25%;
+    
+    --randomized: 330 100% 95%;   /* Light Rose */
+    --randomized-foreground: 330 81% 25%;
+    
+    --ladder: 142 80% 95%;       /* Light Emerald */
+    --ladder-foreground: 142 76% 20%;
+    
+    --cooldown: 173 90% 95%;     /* Light Teal */
+    --cooldown-foreground: 173 80% 20%;
+    
+    --rest: 0 0% 96%;            /* Light Gray for Rest */
+    --rest-foreground: 0 0% 20%;
+
+    /* Break color for block breaks */
+    --break: 60 9.1% 97.8%;
+    --break-foreground: 24 9.8% 10%;
+
+    /* Timer Specific */
+    --timer-warning: 25 95% 53%; /* Orange for last 10s */
+    --timer-critical: 0 84% 60%; /* Red for last 3s */
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(142 76% 46%));
+    --gradient-warmup: linear-gradient(135deg, hsl(var(--warmup)), hsl(45 93% 57%));
+    --gradient-combo: linear-gradient(135deg, hsl(var(--combo)), hsl(217 91% 70%));
+    
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-timer: 0 10px 50px -10px hsl(0 0% 0% / 0.5);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep light theme as default - removing dark mode overrides */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
