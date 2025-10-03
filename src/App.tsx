@@ -10,10 +10,10 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 // Pages
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import SavedClasses from "./pages/SavedClasses";
 import Profile from "./pages/Profile";
 import Welcome from "./pages/Welcome";
 import ClassBuilder from "./pages/ClassBuilder";
+import TimerSuccess from "./pages/TimerSuccess";
 
 // Auth Components
 import Login from "./components/auth/Login";
@@ -49,11 +49,7 @@ const App = () => (
               </ProtectedRoute>
             } />
             <Route path="/class-builder" element={ <ProtectedRoute> <ClassBuilder /> </ProtectedRoute> } />
-            <Route path="/saved-classes" element={
-              <ProtectedRoute>
-                <SavedClasses />
-              </ProtectedRoute>
-            } />
+            <Route path="/timer-success" element={ <ProtectedRoute> <TimerSuccess /> </ProtectedRoute> } />
             
             {/* Admin Routes */}
             <Route path="/admin" element={
